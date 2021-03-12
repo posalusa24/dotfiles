@@ -1,7 +1,7 @@
 #!/bin/sh
 
 picom --experimental-backends &
-~/.fehbg &
+feh --no-fehbg --bg-fill $HOME/downloads/wallpaper.png &
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d I II III IV V VI
