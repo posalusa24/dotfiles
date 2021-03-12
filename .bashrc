@@ -5,6 +5,7 @@
 alias ls='ls --almost-all --color=auto'
 alias vi='nvim'
 alias reboot='sudo reboot'
+alias dotfiles='git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
 
 # Enable forward i-search via pressing ctrl-s
 stty -ixon
