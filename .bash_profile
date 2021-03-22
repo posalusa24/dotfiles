@@ -1,4 +1,5 @@
 # Set environment variables
+export PATH=$HOME/.bin:$PATH
 export LESSHISTFILE=-
 export MESA_GLSL_CACHE_DISABLE=true
 export EDITOR=nvim
