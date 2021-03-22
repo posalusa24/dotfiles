@@ -4,7 +4,7 @@ super + Return
 
 # Launcher
 super + @space
-	rofi -modi drun -show drun
+	rofi -modi drun,run -show drun
 
 # Reload sxhkd
 super + Escape
