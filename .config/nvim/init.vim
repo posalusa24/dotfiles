@@ -15,8 +15,6 @@ set mouse=a
 set clipboard+=unnamedplus
 set splitbelow
 set splitright
-set ignorecase
-set smartcase
 set wildmode=longest:full
 set undofile
 set undodir=/tmp/nvim/undo
