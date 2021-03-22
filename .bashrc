@@ -12,4 +12,4 @@ stty -ixon
 
 # Set shell prompt format
 # Format: '{working_directory} $ '
-PS1='\[\033[38;5;10m\]\w\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;12m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]'
+PS1='\[\033[38;5;10m\][\w]\[$(tput sgr0)\]\n\[$(tput sgr0)\]\[\033[38;5;12m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]'
