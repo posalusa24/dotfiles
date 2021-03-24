@@ -63,6 +63,10 @@ super + {grave,Tab}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
+# Desktop swap controls
+super + alt + {1-9,0}
+	bspc desktop --swap '^{1-9,10}'
+
 # Preselect direction
 super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
