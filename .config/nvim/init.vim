@@ -1,5 +1,7 @@
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-commentary'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'dracula/vim', {'as': 'dracula'}
 call plug#end()
 
@@ -26,6 +28,11 @@ set softtabstop=4
 set expandtab
 " autocmd BufRead,BufNewFile *.html,*.css,*.js,*.json,*.vue setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
+" Auto insert mode when terminal is opened
+autocmd BufEnter term://* startinsert
+
+let mapleader=" "
+
 " Allow shifting selection repeatedly
 vnoremap < <gv
 vnoremap > >gv
@@ -44,3 +51,26 @@ nnoremap Y y$
 
 " Don't overwrite clipboard register with selected text
 vnoremap p "_dP
+
+" Window navigation
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+tnoremap <A-h> <C-\><C-N><C-w>h
+tnoremap <A-j> <C-\><C-N><C-w>j
+tnoremap <A-k> <C-\><C-N><C-w>k
+tnoremap <A-l> <C-\><C-N><C-w>l
+inoremap <A-h> <C-\><C-N><C-w>h
+inoremap <A-j> <C-\><C-N><C-w>j
+inoremap <A-k> <C-\><C-N><C-w>k
+inoremap <A-l> <C-\><C-N><C-w>l
+
+" Escape from terminal-mode
+tnoremap <ESC> <C-\><C-N>
+
+" FZF
+nnoremap <Leader>f :FZF<CR>
+
+" Terminal
+nnoremap <Leader>t :12split term://bash<CR>
