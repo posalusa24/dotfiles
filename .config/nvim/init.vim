@@ -1,4 +1,4 @@
-call plug#begin( stdpath('data') . '/plugged')
+call plug#begin(stdpath('data') . '/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'dracula/vim', {'as': 'dracula'}
 call plug#end()
@@ -15,31 +15,32 @@ set mouse=a
 set clipboard+=unnamedplus
 set splitbelow
 set splitright
-set wildmode=longest:full
 set undofile
 set undodir=/tmp/nvim/undo
+set wildmode=longest:full
 
 set shiftround
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-"autocmd BufRead,BufNewFile *.html,*.css,*.js,*.json,*.vue setlocal tabstop=2 shiftwidth=2 softtabstop=2
-
-"nnoremap <silent> <BS> :noh<CR>
-"vnoremap p "_dP
-"nnoremap x "_x
-"nnoremap d "_d
-"vnoremap d "_d
-"nnoremap D "_D
-"vnoremap D "_D
-"nnoremap c "_c
-"vnoremap c "_c
-"nnoremap dd "_dd
-"nnoremap - $
-"nnoremap _ "kdd"kp
-"nnoremap + "kddk"kP
+" autocmd BufRead,BufNewFile *.html,*.css,*.js,*.json,*.vue setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 " Allow shifting selection repeatedly
 vnoremap < <gv
 vnoremap > >gv
+
+" Escape turns off highlighting from find and replace operations
+nnoremap <silent> <ESC> <ESC>:noh<CR>
+
+" Don't save a single character to clipboard
+nnoremap x "_x
+
+" When in visual, d will only delete because x can cut
+vnoremap d "_d
+
+" Yank to end
+nnoremap Y y$
+
+" Don't overwrite clipboard register with selected text
+vnoremap p "_dP
