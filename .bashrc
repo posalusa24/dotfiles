@@ -1,6 +1,10 @@
 # Return if not running interactively
 [[ $- != *i* ]] && return
 
+# Source fzf
+. /usr/share/doc/fzf/key-bindings.bash
+. /usr/share/doc/fzf/completion.bash
+
 # Set aliases
 alias ls='ls --almost-all --color=auto'
 alias vi='nvim'
