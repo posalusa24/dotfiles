@@ -74,3 +74,6 @@ nnoremap <Leader>f :FZF<CR>
 
 " Terminal
 nnoremap <Leader>t :12split term://bash<CR>
+
+" Compile in terminal
+nnoremap <Leader>c :w<CR>:12split term://make<CR>
